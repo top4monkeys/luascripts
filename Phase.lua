@@ -122,13 +122,13 @@ end
 -- input handling
 
 inputservice.InputBegan:Connect(function(input, proc)
-	if proc then return elseif input.KeyCode == Enum.KeyCode.F1 then
+	if proc then return elseif input.KeyCode == Enum.KeyCode.Z then
 		if phasing == false then
 			start() -- F1 to start phase
 		else
 			stop() -- F1 to end phase (return back to character)
 		end
-	elseif input.KeyCode == Enum.KeyCode.F2 and phasing == true then
+	elseif input.KeyCode == Enum.KeyCode.X and phasing == true then
 		stop(true) -- F2 to end phase (teleport character to phaser)
 	end
 end)
